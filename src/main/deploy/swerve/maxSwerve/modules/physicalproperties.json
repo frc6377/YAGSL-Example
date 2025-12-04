@@ -1,23 +1,28 @@
 {
-  "conversionFactors": {
-    "angle": {
-      "gearRatio": 46.42,
-      "factor": 0
-    },
-    "drive": {
-      "gearRatio": 5.50,
-      "diameter": 3,
-      "factor": 0
-    }
+  "optimalVoltage": 12,
+  "robotWeight": {
+    "total": 30.2,
+    "units": "lbs"
   },
+  "wheelGripCoefficientOfFriction": 1.2,
   "currentLimit": {
-    "drive": 40,
+    "drive": 25,
     "angle": 20
   },
   "rampRate": {
     "drive": 0.25,
     "angle": 0.25
   },
-  "optimalVoltage": 12,
-  "wheelGripCoefficientOfFriction": 1.19
+  "wheelDiameter": {
+    "diameter": 3.0,
+    "units": "inches"
+  },
+  "gearRatio": {
+    "drive": 4.71428,
+    "angle": 46.4236
+  },
+  "motorTypes": {
+    "drive": "sparkmax_neo",
+    "angle": "sparkmax_neo550"
+  }
 }
