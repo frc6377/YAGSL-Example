@@ -4,11 +4,14 @@
 
 package frc.robot;
 
+import static edu.wpi.first.units.Units.Kilogram;
 import static edu.wpi.first.units.Units.MetersPerSecond;
+import static edu.wpi.first.units.Units.Pounds;
 
 import edu.wpi.first.math.geometry.Translation3d;
 import edu.wpi.first.math.util.Units;
 import edu.wpi.first.units.measure.LinearVelocity;
+import edu.wpi.first.units.measure.Mass;
 import swervelib.math.Matter;
 
 /**
@@ -22,8 +25,8 @@ import swervelib.math.Matter;
 public final class Constants
 {
 
-  public static final double ROBOT_MASS = 30.2 * 0.453592; // 30.2 lbs * kg per pound
-  public static final Matter CHASSIS    = new Matter(new Translation3d(0, 0, Units.inchesToMeters(2)), ROBOT_MASS); // Est. CoM height
+  public static final Mass ROBOT_MASS = Pounds.of(30.2); // 30.2 lbs * kg per pound
+  public static final Matter CHASSIS    = new Matter(new Translation3d(0, 0, Units.inchesToMeters(2)), ROBOT_MASS.in(Kilogram)); // Est. CoM height
   public static final double LOOP_TIME  = 0.13; //s, 20ms + 110ms sprk max velocity lag
   public static final double MAX_SPEED  = 4.8;
   // Maximum speed of the robot in meters per second, used to limit acceleration.
